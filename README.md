@@ -38,6 +38,7 @@ cd grid-center-track
 pip install -r requirements.txt
 mv main-lite.py $CenterTrack_ROOT/src/
 mv logger.py $CenterTrack_ROOT/src/lib
+mv liteTrainer.py $CenterTrack_ROOT/src/lib
 ```
 
 # Pytorch Example
