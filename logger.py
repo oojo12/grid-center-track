@@ -16,7 +16,7 @@ except:
   USE_TENSORBOARD = False
 
 class Logger(object):
-  def __init__(self, opt, rank):
+  def __init__(self, opt, rank=0):
     self.rank = rank
     """Create a summary writer logging to log_dir."""
     if not os.path.exists(opt.save_dir):
