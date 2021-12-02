@@ -12,7 +12,6 @@ The purpose of this repository is to give reproducible steps to the following:
 To follow along exactly with this tutorial you will only need the following software:
 1. Conda - https://docs.anaconda.com/anaconda/install/index.html
 2. Python - https://www.python.org/downloads/
-3. Git
 
 # Set Up Environment
 The below commands can be used to set up the necessary environment. First we will set the variable CenterTrack_ROOT=/path/to/clone/CenterTrack. After doing that the code below should work for setting up the environment.
@@ -33,6 +32,7 @@ cd DCNv2
 git checkout remotes/origin/pytorch_1.9
 ./make.sh
 cd $CenterTrack_ROOT
+mkdir data
 git clone https://github.com/oojo12/grid-center-track.git
 cd grid-center-track
 pip install -r requirements.txt
@@ -60,3 +60,4 @@ python main-lite.py tracking --exp_id mot17_half_sc --dataset custom --custom_da
 
 # Grid Multi-Node Example
 TBD
+
