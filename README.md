@@ -23,7 +23,7 @@ The below commands can be used to set up the necessary environment. First we wil
 
 conda create --name CenterTrack python=3.6 -y
 conda activate CenterTrack
-conda install pytorch=1.10.0 torchvision=0.11.0 -c pytorch -y
+conda install pytorch=1.9.0 torchvision=0.10.0 -c pytorch -y
 pip install lightning-grid --upgrade; pip install -U "git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI"
 git clone --recursive https://github.com/xingyizhou/CenterTrack $CenterTrack_ROOT
 cd $CenterTrack_ROOT/src/lib/model/networks/
@@ -45,6 +45,7 @@ mv logger-lite.py $CenterTrack_ROOT/src/lib
 3. At the time of writing this lines 32-33 of /CenterTrack/src/lib/logger.py had to be commented out when following these instructions
 4. Run the below code.
 ```
+cd $CenterTrack_ROOT/src
 python main.py tracking --exp_id mot17_half_sc --dataset custom --custom_dataset_ann_path ../data/mot17/annotations/train_half.json --custom_dataset_img_path ../data/mot17/train/ --input_h 544 --input_w 960 --num_classes 1 --pre_hm --ltrb_amodal --same_aug --hm_disturb 0.05 --lost_disturb 0.4 --fp_disturb 0.1 --gpus 0,1
 ```
 
@@ -53,6 +54,7 @@ python main.py tracking --exp_id mot17_half_sc --dataset custom --custom_dataset
 2. Get example data - follow instructions at https://github.com/xingyizhou/CenterTrack/blob/master/readme/DATA.md
 3. Run the below code
 ```
+cd $CenterTrack_ROOT/src
 python main-lite.py tracking --exp_id mot17_half_sc --dataset custom --custom_dataset_ann_path ../data/mot17/annotations/train_half.json --custom_dataset_img_path ../data/mot17/train/ --input_h 544 --input_w 960 --num_classes 1 --pre_hm --ltrb_amodal --same_aug --hm_disturb 0.05 --lost_disturb 0.4 --fp_disturb 0.1
 ```
 
