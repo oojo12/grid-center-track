@@ -17,6 +17,7 @@ To follow along exactly with this tutorial you will only need the following soft
 The below commands can be used to set up the necessary environment. First we will set the variable CenterTrack_ROOT=/path/to/clone/CenterTrack. After doing that the code below should work for setting up the environment.
 ```
 # Grid.ai Virtual Environment. These are modified from the steps at https://github.com/xingyizhou/CenterTrack/blob/master/readme/INSTALL.md
+
 conda create --name CenterTrack python=3.6 -y
 conda activate CenterTrack
 conda install pytorch=1.10.0 torchvision=0.11.0 -c pytorch -y
