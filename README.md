@@ -1,5 +1,5 @@
 # Credits
-This work is largely an adaptation from showcasing the power of Grid and Pytorch Lightning Lite.
+This work is largely an adaptation from https://github.com/xingyizhou/CenterTrack showcasing the power of Grid and Pytorch Lightning Lite.
 
 # Purpose
 The purpose of this repository is to give reproducible steps to the following:
