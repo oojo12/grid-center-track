@@ -14,7 +14,7 @@ To follow along exactly with this tutorial you will only need the following soft
 2. Python - https://www.python.org/downloads/
 
 # Set Up Environment
-The below commands can be used to set up the necessary environment.
+The below commands can be used to set up the necessary environment. First we will set the variable CenterTrack_ROOT=/path/to/clone/CenterTrack. After doing that the code below should work for setting up the environment.
 
 **For now you will manually have to convert from torch.hub import load_state_dict_from_url to from torchvision.models.utils import load_state_dict_from_url for this code to run. This change can be made in the /CenterTrack/src/lib/model/networks/backbones directory**
 
@@ -25,7 +25,7 @@ conda create --name CenterTrack python=3.6 -y
 conda activate CenterTrack
 conda install pytorch=1.10.0 torchvision=0.11.0 -c pytorch -y
 pip install lightning-grid --upgrade; pip install -U "git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI"
-git clone --recursive https://github.com/xingyizhou/CenterTrack 
+git clone --recursive https://github.com/xingyizhou/CenterTrack $CenterTrack_ROOT
 cd $CenterTrack_ROOT/src/lib/model/networks/
 git clone https://github.com/lbin/DCNv2.git
 cd DCNv2
