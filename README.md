@@ -23,7 +23,7 @@ The below commands can be used to set up the necessary environment. First we wil
 
 conda create --name CenterTrack python=3.6 -y
 conda activate CenterTrack
-conda install pytorch=1.9.0 torchvision=0.10.0 -c pytorch -y
+conda install pytorch=1.9.1 torchvision=0.10.0 -c pytorch -y
 pip install lightning-grid --upgrade; pip install -U "git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI"
 git clone --recursive https://github.com/xingyizhou/CenterTrack $CenterTrack_ROOT
 cd $CenterTrack_ROOT/src/lib/model/networks/
