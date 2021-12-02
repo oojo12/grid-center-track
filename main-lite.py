@@ -12,7 +12,7 @@ from model.model import create_model, load_model, save_model
 from model.data_parallel import DataParallel
 from logger import Logger
 from dataset.dataset_factory import get_dataset
-from trainer import Trainer
+from liteTrainer import Trainer
 from pytorch_lightning.lite import LightningLite
 import time
 
