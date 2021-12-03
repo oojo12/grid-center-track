@@ -77,13 +77,13 @@ The steps are very similar to the above and the reader is advised to visit https
 ## Grid Multi-Node Example
 TO DO
 
-# Statistics Gathering
+# Statistics
+## Gathering
 The below code will collect the below statistics as background processes. To kill the background process run ps to find the process id and follow up with a kill command.
 1. GPU utlization and GPU RAM utilization
 2. CPU utilization and RAM utilization
 3. Network bandwidth - TO DO
 4. Storage iops, storage bandwidth, network packets, network bandwidth - TO DO
-5. Bar chart performance difference - TO DO
 
 ```
 cd $CenterTrack_ROOT/src
