@@ -12,6 +12,7 @@ The purpose of this repository is to give reproducible steps to the following:
 To follow along exactly with this tutorial you will only need the following software:
 1. Conda - https://docs.anaconda.com/anaconda/install/index.html
 2. Python - https://www.python.org/downloads/
+3. nvidia-smi
 
 # Set Up Environment
 The below commands can be used to set up the necessary environment. First we will set the variable CenterTrack_ROOT=/path/to/clone/CenterTrack. After doing that the code below should work for setting up the environment.
@@ -62,3 +63,10 @@ python main-lite.py tracking --exp_id mot17_half_sc --dataset custom --custom_da
 # Grid Multi-Node Example
 TBD
 
+# Statistics Gathering
+Run the following commands in seperate terminals.
+```
+# GPU
+nvidia-smi --query-gpu=utilization.gpu --format=csv --loop=1 >> gpu_compute_utilization.txt
+nvidia-smi --query-gpu=utilization.memory --format=csv --loop=1 >> gpu_memory_utilization.txt
+```
