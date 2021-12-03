@@ -19,8 +19,6 @@ To follow along exactly with this tutorial you will need the following software:
 # Set Up Environment
 The below commands can be used to set up the necessary environment. First we will set the variable CenterTrack_ROOT=/path/to/clone/CenterTrack. After doing that the code below should work for setting up the environment.
 
-**For now you will manually have to convert from torch.hub import load_state_dict_from_url to from torchvision.models.utils import load_state_dict_from_url for this code to run. This change can be made in the /CenterTrack/src/lib/model/networks/backbones directory**
-
 ```
 # Grid.ai Virtual Environment. These are modified from the steps at https://github.com/xingyizhou/CenterTrack/blob/master/readme/INSTALL.md
 
