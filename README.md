@@ -69,4 +69,12 @@ Run the following commands in seperate terminals.
 # GPU
 nvidia-smi --query-gpu=utilization.gpu --format=csv --loop=1 >> gpu_compute_utilization.txt
 nvidia-smi --query-gpu=utilization.memory --format=csv --loop=1 >> gpu_memory_utilization.txt
+
+# CPU - the below may be a good start for programatically tracking cpu and memory utilization
+import psutil
+p = psutil.Process()
+with p.oneshot():
+    p.name()  # execute internal routine once collecting multiple info
+    p.memory_percent()  # return cached value
+    p.cpu_percent()  # return cached value
 ```
