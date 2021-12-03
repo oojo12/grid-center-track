@@ -66,7 +66,7 @@ TBD
 # Statistics Gathering
 Run the following commands in seperate terminals.
 ```
-# GPU
+# GPU - collects on 1 second interval in csv format
 nvidia-smi --query-gpu=utilization.gpu --format=csv --loop=1 >> gpu_compute_utilization.txt
 nvidia-smi --query-gpu=utilization.memory --format=csv --loop=1 >> gpu_memory_utilization.txt
 
