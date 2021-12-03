@@ -14,6 +14,7 @@ To follow along exactly with this tutorial you will need the following software:
 2. Python - https://www.python.org/downloads/
 3. Nvidia-smi
 4. Git
+5. nohup
 
 # Set Up Environment
 The below commands can be used to set up the necessary environment. First we will set the variable CenterTrack_ROOT=/path/to/clone/CenterTrack. After doing that the code below should work for setting up the environment.
@@ -65,17 +66,4 @@ python main-lite.py tracking --exp_id mot17_half_sc --dataset custom --custom_da
 TBD
 
 # Statistics Gathering
-Run the following commands in seperate terminals.
-```
-# GPU - collects on 1 second interval in csv format
-nvidia-smi --query-gpu=utilization.gpu --format=csv --loop=1 >> gpu_compute_utilization.txt
-nvidia-smi --query-gpu=utilization.memory --format=csv --loop=1 >> gpu_memory_utilization.txt
-
-# CPU - the below may be a good start for programatically tracking cpu and memory utilization
-import psutil
-p = psutil.Process()
-with p.oneshot():
-    p.name()  # execute internal routine once collecting multiple info
-    p.memory_percent()  # return cached value
-    p.cpu_percent()  # return cached value
-```
+run `gather_stats.sh`
