@@ -16,7 +16,7 @@ To follow along exactly with this tutorial you will need the following software:
 4. Git
 5. nohup
 
-# Set Up Environment
+# Set Up Software Environment
 The below commands can be used to set up the necessary environment. First we will set the variable CenterTrack_ROOT=/path/to/clone/CenterTrack. After doing that the code below should work for setting up the environment.
 
 ```
@@ -62,8 +62,19 @@ python main.py tracking --exp_id mot17_half_sc --dataset custom --custom_dataset
 cd $CenterTrack_ROOT/src
 python main-lite.py tracking --exp_id mot17_half_sc --dataset custom --custom_dataset_ann_path ../data/mot17/annotations/train_half.json --custom_dataset_img_path ../data/mot17/train/ --input_h 544 --input_w 960 --num_classes 1 --pre_hm --ltrb_amodal --same_aug --hm_disturb 0.05 --lost_disturb 0.4 --fp_disturb 0.1
 ```
+# Grid
+## Set Up w/ Grid CLI
+1. install grid - pip install lightning-grid --upgrade
+2. log into grid - grid login #you will be prompted to log in with your api key and username. Alternatively you can visit https://platform.grid.ai/#/settings?tabId=apikey and the exact command will be given to you
+3. If you logged in with Google you may want to visit https://platform.grid.ai/#/settings?tabId=integrations and integrate your Grid account with your Github if you plan on using public or private repos with grid run. Alternatively you can use the localdir flag for local directories
+4. Visit "Step 4: Start a Session" https://docs.grid.ai/start-here/typical-workflow-cli-user 
+5. Visit session via ssh or UI. Instructions here (https://docs.grid.ai/start-here/typical-workflow-cli-user  step 5)
+6. Run code in "Set Up Software Environment" Section
 
-# Grid Multi-Node Example
+## Set up Grid UI
+The steps are very similar to the above and the reader is advised to visit https://docs.grid.ai/start-here/typical-workflow-web-user for complete instructions.
+
+## Grid Multi-Node Example
 TBD
 
 # Statistics Gathering
