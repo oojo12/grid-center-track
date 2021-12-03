@@ -36,12 +36,15 @@ git checkout remotes/origin/pytorch_1.9
 ./make.sh
 cd $CenterTrack_ROOT
 mkdir data
+mkdir stats
 git clone https://github.com/oojo12/grid-center-track.git
 cd grid-center-track
 pip install -r requirements.txt
 mv main-lite.py $CenterTrack_ROOT/src/
 mv logger.py $CenterTrack_ROOT/src/lib
 mv liteTrainer.py $CenterTrack_ROOT/src/lib
+mv gather-stats.sh  $CenterTrack_ROOT/src/
+mv gather-cpu-stats.py $CenterTrack_ROOT/src/
 ```
 
 # Pytorch Example
