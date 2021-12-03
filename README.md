@@ -67,4 +67,7 @@ python main-lite.py tracking --exp_id mot17_half_sc --dataset custom --custom_da
 TBD
 
 # Statistics Gathering
-run `gather_stats.sh`
+```
+cd $CenterTrack_ROOT/src
+gather_stats.sh
+```
