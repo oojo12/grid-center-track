@@ -30,8 +30,6 @@ def get_optimizer(opt, model):
 class Lite(LightningLite):        
     def run(self, opt=None, num_epochs=10):
       logger = Logger(opt, rank=self.global_rank)
-      #added the below line
-      opt.batch_size=3
       torch.manual_seed(opt.seed)
       torch.backends.cudnn.benchmark = not opt.not_cuda_benchmark and not opt.test
       Dataset = get_dataset(opt.dataset)
