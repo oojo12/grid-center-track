@@ -75,12 +75,16 @@ python main-lite.py tracking --exp_id mot17_half_sc --dataset custom --custom_da
 The steps are very similar to the above and the reader is advised to visit https://docs.grid.ai/start-here/typical-workflow-web-user for complete instructions.
 
 ## Grid Multi-Node Example
-TBD
+TO DO
 
 # Statistics Gathering
 The below code will collect the below statistics as background processes. To kill the background process run ps to find the process id and follow up with a kill command.
-1. GPU utlization and GPU memory utilization
+1. GPU utlization and GPU RAM utilization
 2. CPU utilization and RAM utilization
+3. Network bandwidth - TO DO
+4. Storage iops, storage bandwidth, network packets, network bandwidth - TO DO
+5. Bar chart performance difference - TO DO
+
 ```
 cd $CenterTrack_ROOT/src
 gather_stats.sh
