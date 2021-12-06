@@ -44,6 +44,7 @@ mv liteTrainer.py $CenterTrack_ROOT/src/lib
 mv gather-stats.sh  $CenterTrack_ROOT/src/
 mv gather-cpu-stats.py $CenterTrack_ROOT/src/
 mv gather-net-stats.py $CenterTrack_ROOT/src/
+mv get_mot_17.sh $CenterTrack_ROOT/src/tools/
 ```
 
 # Pytorch Example
