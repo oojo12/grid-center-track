@@ -87,5 +87,5 @@ The below code will collect the below statistics as background processes. To kil
 
 ```
 cd $CenterTrack_ROOT/src
-gather_stats.sh
+gather-stats.sh
 ```
