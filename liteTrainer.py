@@ -293,7 +293,7 @@ class Trainer(object):
       else:
         debugger.show_all_imgs(pause=True)
   
-  def val(self, epoch, data_loader):
+  def val(self, lite, epoch, data_loader):
     return self.run_epoch('val', lite, epoch, data_loader)
 
   def train(self, lite, epoch, data_loader):
