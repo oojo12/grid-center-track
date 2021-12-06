@@ -47,20 +47,16 @@ mv gather-net-stats.py $CenterTrack_ROOT/src/
 ```
 
 # Pytorch Example
-1. Training on custom data section here https://github.com/xingyizhou/CenterTrack
-2. Get example data - follow instructions at https://github.com/xingyizhou/CenterTrack/blob/master/readme/DATA.md
-3. Run the below code.
 ```
-cd $CenterTrack_ROOT/src
+cd $CenterTrack_ROOT/src/tools/
+bash get_mot_17.sh
 python main.py tracking --exp_id mot17_half_sc --dataset custom --custom_dataset_ann_path ../data/mot17/annotations/train_half.json --custom_dataset_img_path ../data/mot17/train/ --input_h 544 --input_w 960 --num_classes 1 --pre_hm --ltrb_amodal --same_aug --hm_disturb 0.05 --lost_disturb 0.4 --fp_disturb 0.1 --gpus 0,1
 ```
 
 # Pytorch Lightning Example
-1. Training on custom data section here https://github.com/xingyizhou/CenterTrack
-2. Get example data - follow instructions at https://github.com/xingyizhou/CenterTrack/blob/master/readme/DATA.md
-3. Run the below code
 ```
-cd $CenterTrack_ROOT/src
+cd $CenterTrack_ROOT/src/tools/
+bash get_mot_17.sh
 python main-lite.py tracking --exp_id mot17_half_sc --dataset custom --custom_dataset_ann_path ../data/mot17/annotations/train_half.json --custom_dataset_img_path ../data/mot17/train/ --input_h 544 --input_w 960 --num_classes 1 --pre_hm --ltrb_amodal --same_aug --hm_disturb 0.05 --lost_disturb 0.4 --fp_disturb 0.1
 ```
 # Grid
