@@ -53,7 +53,7 @@ class Lite(LightningLite):
           pin_memory=True)
 
         if opt.test:
-          _, preds = trainer.val(0, val_loader)
+          _, preds = trainer.val(self, 0, val_loader)
           val_loader.dataset.run_eval(preds, opt.save_dir)
           return
         val_loader = self.setup_dataloaders(val_loader)
@@ -78,7 +78,7 @@ class Lite(LightningLite):
               save_model(os.path.join(opt.save_dir, 'model_{}.pth'.format(mark)), 
                          epoch, model, optimizer)
               with torch.no_grad():
-                log_dict_val, preds = trainer.val(epoch, val_loader)
+                log_dict_val, preds = trainer.val(self, epoch, val_loader)
                 if opt.eval_val:
                   val_loader.dataset.run_eval(preds, opt.save_dir)
               for k, v in log_dict_val.items():
