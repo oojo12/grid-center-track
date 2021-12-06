@@ -1,4 +1,3 @@
-import csv
 import time
 import psutil
 import subprocess
