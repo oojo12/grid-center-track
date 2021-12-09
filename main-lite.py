@@ -101,6 +101,6 @@ class Lite(LightningLite):
 if __name__ == '__main__':
     start = time.time()
     opt = opts().parse()
-    Lite(strategy="ddp", devices=len(opt.gpus), accelerator="gpu").run(opt=opt, num_epochs=1000)
+    Lite(strategy="ddp", devices=opt.gpus, accelerator="gpu").run(opt=opt, num_epochs=1000)
     end = time.time()
     print(f'training took {(end-start)/60} minutes to complete')
