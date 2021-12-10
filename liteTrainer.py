@@ -108,7 +108,7 @@ class Trainer(object):
     self.model_with_loss = ModleWithLoss(model, self.loss)
 
 
-  def run_epoch(self, lite, phase, epoch, data_loader):
+  def run_epoch(self, phase, lite, epoch, data_loader):
     model_with_loss = self.model_with_loss
     if phase == 'train':
       model_with_loss.train()
