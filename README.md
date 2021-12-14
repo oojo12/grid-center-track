@@ -6,7 +6,7 @@ The purpose of this repository is to give reproducible steps to the following:
 1. Deploy Center Track models locally
 2. **Scale** Center Track model deployments with Grid
 3. Automate Grid approach with git actions
-4. **Optimize** model performance with Pytorch-lightning
+4. **Simplify** model code with Pytorch-lightning
 
 # Prerequisites
 To follow along exactly with this tutorial you will need the following software:
